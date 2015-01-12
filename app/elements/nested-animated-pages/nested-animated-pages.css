@@ -1,0 +1,317 @@
+:host {
+  display: block;
+}
+core-animated-pages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.tall-toolbar {
+  box-sizing: border-box;
+  height: 360px;
+}
+.tall-toolbar .indent {
+  margin-left: 4%;
+}
+.tall-toolbar.colored {
+  background-color: #90A4AE;
+  fill: #fff;
+  color: #fff;
+}
+.tall-toolbar.colored-danger {
+  background-color: #F44336;
+}
+.tall-toolbar.colored-success {
+  background-color: #4CAF50;
+}
+.tall-toolbar #paper_tabs {
+  margin-left: 6%;
+  margin-right: 4%;
+}
+.toolbar-title {
+  font-size: 1.3em;
+}
+paper-icon-button {
+  margin: 16px;
+}
+
+.body {
+  background-color: #f1f1f1;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+.card > h2 {
+  margin-bottom: 5px;
+}
+.card > small {
+  display: block;
+  margin-bottom: 5px;
+}
+hr {
+  border-top: 0;
+  border-bottom: 1px solid #eee;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.body small {
+  color: #999;
+}
+.padding {
+  padding: 20px;
+}
+.indented {
+  margin-left: 20px;
+}
+core-animated-pages {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#core_drawer_panel {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.body:not([narrow]) .gutter {
+  padding: 10px;
+}
+.body:not([narrow]) .column {
+  margin: 10px;
+}
+.body[narrow] .gutter {
+  padding: 5px;
+}
+.body[narrow] .column {
+  margin: 5px;
+}
+#section {
+  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px, rgba(0, 0, 0, 0.0980392) 0px 0px 3px;
+}
+#section1 {
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgb(221, 221, 221);
+}
+#core_scroll_header_panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#core_toolbar,
+#core_toolbar2 {
+  color: white;
+  fill: white;
+  background-color: #4CAF50;
+}
+#paper_tabs {
+  text-transform: uppercase;
+}
+#paper_tabs::shadow #selectionBar {
+  background-color: white;
+}
+#paper_tabs paper-tab::shadow #ink {
+  color: white;
+}
+#paper_tabs2::shadow #selectionBar {
+  background-color: #4CAF50;
+}
+#paper_tabs2 paper-tab::shadow #ink {
+  color: #4CAF50;
+}
+#paper_tabs2.tabs-danger::shadow #selectionBar {
+  background-color: #F44336;
+}
+#paper_tabs2.tabs-danger paper-tab::shadow #ink {
+  color: #F44336;
+}
+#paper_dropdown_menu {
+  border-bottom: 0;
+  width: 100%;
+  color: white;
+}
+#paper_dropdown_menu::shadow #label,
+#paper_dropdown_menu::shadow #arrow {
+  color: white;
+}
+#paper_dropdown_menu::shadow #label {
+  font-size: 14px;
+}
+#paper_dropdown {
+  color: #333;
+  width: 100%;
+}
+#section2 {
+  height: 5000px;
+}
+#core_card {
+  position: static;
+  width: 300px;
+  height: 300px;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px, rgba(0, 0, 0, 0.0980392) 0px 0px 3px;
+  margin: 10px;
+  background-color: rgb(255, 255, 255);
+}
+.card {
+  display: inline-block;
+  background: white;
+  box-sizing: border-box;
+  min-height: 100px;
+  padding: 0;
+  border-radius: 2px;
+  width: 100%;
+}
+.card + .card {
+  margin-top: 20px;
+}
+.card .core_menu {
+  margin: 0;
+}
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-weight: 500;
+  color: #666;
+}
+.card time {
+  color: #999;
+  font-size: 14px;
+}
+.metrics {
+  font-size: 26px;
+  line-height: 1.75;
+}
+.metrics small {
+  font-size: 16px;
+}
+.body .metric-primary {
+  color: #03A9F4;
+}
+.body .metric-secondary {
+  color: #4CAF50;
+}
+.body .metric-success {
+  color: #4CAF50;
+}
+.body .metric-danger {
+  color: #F44336;
+}
+.body .metric-warning {
+  color: #FF9800;
+}
+.legend-item {
+  margin-left: 2%;
+  font-size: 26px;
+}
+.body .metric-primary {
+  color: #03A9F4;
+}
+.body .metric-secondary {
+  color: #4CAF50;
+}
+#core_menu {
+  font-size: 16px;
+  position: static;
+  margin: 0;
+}
+#core_menu core-icon {
+  margin-right: 30px;
+  color: #737373;
+}
+.square {
+  display: inline-block;
+  margin: 8px;
+  padding: 8px;
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  color: #fff;
+}
+#resizing_chart {
+  width: 100%;
+  height: 150px;
+}
+#resizing_chart /deep/ div[dir="ltr"] {
+  width: 100% !important;
+}
+.force-vertical /deep/ [layout][horizontal] {
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: inherit;
+  -webkit-align-items: inherit;
+  align-items: inherit;
+}
+#resizing_chart {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+.tall-toolbar #resizing_chart /deep/ svg {
+  margin-top: -25px;
+  margin-left: -25px;
+}
+.body #resizing_chart /deep/ svg {
+  margin-top: -20px;
+  margin-left: -25px;
+}
+.tall-toolbar #resizing_chart /deep/ rect[fill="#3366cc"] {
+  fill: rgba(255, 255, 255, 0.8);
+}
+.tall-toolbar #resizing_chart /deep/ rect[fill="#333333"] {
+  fill: rgba(255, 255, 255, 0.4);
+}
+.tall-toolbar #resizing_chart /deep/ rect[fill="#cccccc"] {
+  fill: rgba(255, 255, 255, 0.25);
+}
+.tall-toolbar #resizing_chart /deep/ text[fill="#444444"],
+.tall-toolbar #resizing_chart /deep/ text[fill="#222222"] {
+  fill: rgba(255, 255, 255, 0.8);
+}
+.tall-toolbar #resizing_chart.chart-area /deep/ path[stroke="#3366cc"] {
+  stroke: white;
+  stroke-width: 3;
+}
+.tall-toolbar #resizing_chart /deep/ path[fill="#3366cc"] {
+  fill: rgba(255, 255, 255, 0.25);
+}
+.body #resizing_chart /deep/ rect[fill="#3366cc"] {
+  fill: orange;
+}
+.body #resizing_chart /deep/ rect[fill="#cccccc"] {
+  fill: rgba(0, 0, 0, 0.05);
+}
+.body #resizing_chart /deep/ text[fill="#444444"],
+.body #resizing_chart /deep/ text[fill="#222222"] {
+  fill: rgba(0, 0, 0, 0.5);
+}
+.body #resizing_chart /deep/ rect[fill="#333333"] {
+  fill: rgba(0, 0, 0, 0.1);
+}
+.body #resizing_chart /deep/ path[stroke="#3366cc"] {
+  stroke: #4CAF50;
+  stroke-width: 3;
+}
+paper-progress.progress-danger::shadow #activeProgress {
+  background-color: #F44336;
+}
+paper-progress.progress-danger::shadow #progressContainer {
+  background-color: #FFCDD2;
+}
+paper-progress.progress-success::shadow #activeProgress {
+  background-color: #A5D6A7;
+}
+paper-progress.progress-success::shadow #progressContainer {
+  background-color: #4CAF50;
+}
+.stats span {
+  padding: 10px;
+}

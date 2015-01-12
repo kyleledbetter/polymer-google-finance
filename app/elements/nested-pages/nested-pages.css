@@ -1,0 +1,251 @@
+:host {
+  display: block;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+.card > h2 {
+  margin-bottom: 5px;
+}
+.card > small {
+  display: block;
+  margin-bottom: 5px;
+}
+hr {
+  border-top: 0;
+  border-bottom: 1px solid #eee;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+small {
+  color: #999;
+}
+.text-sm {
+  font-size: 14px;
+  line-height: 15px;
+}
+.padding {
+  padding: 20px;
+}
+.indented {
+  margin-left: 20px;
+}
+.indented-lg {
+  margin-left: 80px;
+}
+core-animated-pages {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#core_drawer_panel {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+#core_drawer_panel:not([narrow]) .gutter {
+  padding: 10px;
+}
+#core_drawer_panel:not([narrow]) .column {
+  margin: 10px;
+}
+#core_drawer_panel[narrow] .gutter {
+  padding: 5px;
+}
+#core_drawer_panel[narrow] .column {
+  margin: 5px;
+}
+#section {
+  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px, rgba(0, 0, 0, 0.0980392) 0px 0px 3px;
+  background-color: rgb(250, 250, 250);
+}
+#section1 {
+  height: 100%;
+  box-sizing: border-box;
+}
+#core_scroll_header_panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#core_toolbar,
+#core_toolbar2 {
+  color: white;
+  fill: white;
+  background-color: #4CAF50;
+}
+#paper_tabs {
+  text-transform: uppercase;
+  margin-right: -10px;
+  margin-bottom: -14px;
+  margin-left: -10px;
+}
+#paper_tabs::shadow #selectionBar {
+  background-color: #fff;
+}
+#paper_tabs paper-tab::shadow #ink {
+  color: #fff;
+}
+#paper_tabs2::shadow #selectionBar {
+  background-color: #4CAF50;
+}
+#paper_tabs2 paper-tab::shadow #ink {
+  color: #4CAF50;
+}
+.card paper-item /deep/ paper-ripple {
+  color: #90A4AE;
+}
+.card paper-item.ripple-danger /deep/ paper-ripple {
+  color: #F44336;
+}
+.card paper-item.core-selected {
+  background-color: transparent;
+}
+#paper_dropdown_menu {
+  border-bottom: 0;
+  width: 100%;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+#paper_dropdown_menu::shadow #label,
+#paper_dropdown_menu::shadow #arrow {
+  color: white;
+}
+#paper_dropdown_menu::shadow #label {
+  font-size: 14px;
+}
+#paper_dropdown {
+  color: #333;
+  width: 100%;
+}
+#section2 {
+  height: auto;
+  
+}
+#core_card {
+  position: static;
+  width: 300px;
+  height: 300px;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px, rgba(0, 0, 0, 0.0980392) 0px 0px 3px;
+  margin: 10px;
+  background-color: rgb(255, 255, 255);
+}
+.card {
+  display: inline-block;
+  background: white;
+  box-sizing: border-box;
+  min-height: 100px;
+  padding: 0;
+  border-radius: 2px;
+  width: 100%;
+}
+.card + .card {
+  margin-top: 20px;
+}
+.card .core_menu {
+  margin: 0;
+}
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-weight: 500;
+  color: #666;
+}
+.card time {
+  color: #999;
+  font-size: 14px;
+}
+.metrics {
+  font-size: 26px;
+  line-height: 1.75;
+}
+.metrics small {
+  font-size: 16px;
+}
+.metric-primary {
+  color: #03A9F4;
+}
+.metric-secondary {
+  color: #4CAF50;
+}
+.metric-success {
+  color: #4CAF50;
+}
+.metric-danger {
+  color: #F44336;
+}
+.metric-warning {
+  color: #FF9800;
+}
+.legend-item {
+  margin-left: 2%;
+  font-size: 26px;
+}
+#core_menu {
+  font-size: 16px;
+  position: static;
+  margin: 0;
+}
+#core_menu core-icon {
+  margin-right: 30px;
+  color: #737373;
+}
+.square {
+  display: inline-block;
+  margin: 8px;
+  padding: 8px;
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  color: #fff;
+}
+#resizing_chart {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  transform: scale(1.1, 1.1);
+  margin-left: 15px;
+  margin-top: -15px;
+}
+.force-vertical /deep/ [layout][horizontal] {
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: inherit;
+  -webkit-align-items: inherit;
+  align-items: inherit;
+}
+#resizing_chart /deep/ rect[fill="#3366cc"] {
+  fill: #03A9F4;
+}
+#resizing_chart /deep/ rect[fill="#cccccc"] {
+  fill: rgba(0, 0, 0, 0.05);
+}
+#resizing_chart /deep/ text[fill="#444444"],
+#resizing_chart /deep/ text[fill="#222222"] {
+  fill: rgba(0, 0, 0, 0.3);
+}
+#resizing_chart /deep/ rect[fill="#333333"] {
+  fill: rgba(0, 0, 0, 0.1);
+}
+#resizing_chart /deep/ path[stroke="#3366cc"] {
+  stroke: #03A9F4;
+  stroke-width: 3;
+}
+[drawer] core-image {
+  margin-top: 60px;
+}
+core-image /deep/ img {
+  border-radius: 99%;
+}
+.more {
+  color: #999;
+  margin-top: 4px;
+  margin-right: 4px;
+}
