@@ -7,7 +7,7 @@
     </core-media-query>
     <core-animated-pages id="pages" selected="{{page}}" selectedItem="{{selectedItem}}" transitions="hero-transition" no-transition?="{{noTransition}}">
     <section id="page0" cross-fade narrow?="{{!largeScreen}}">
-      <div class="tall-toolbar colored" layout vertical hero-id="thing" hero?="{{page === 0 || !noTransition}}">
+      <div class="tall-toolbar colored colored-default" layout vertical hero-id="thing" hero?="{{page === 0 || !noTransition}}">
         <div layout horizontal center>
           <paper-icon-button icon="clear" on-tap="{{back}}"></paper-icon-button>
           <div flex class="toolbar-title">.DJI, .INX, .IXIC</div>
@@ -32,6 +32,7 @@
         </paper-tabs>
         <google-chart
           id='resizing_chart'
+          class='resizing_chart'
           type='line'
           options='{"title": "",
                     "backgroundColor": "transparent",
@@ -61,16 +62,48 @@
                 </div>
                 <hr>
                 <core-menu class="core_menu" id="core_menu2" on-tap="{{transition}}" selectedAttribute="">
-                  <paper-item id="thing1" hero-id="thing" hero?="{{subpage === 1}}" cross-fade?="{{subpage !== 1}}">
+                  <paper-item id="thing1" class="ripple-danger" hero-id="thing" hero?="{{subpage === 1}}" cross-fade?="{{subpage !== 1}}">
                     <div horizontal justified layout style="width:100%">
                       <span class="legend-item metric-danger">&#9679;</span>
+                      <span hidden?="{{!largeScreen}}">
+                        <google-chart
+                          id='sparkline_chart'
+                          class='chart-sparkline chart-sparkline-danger'
+                          type='line'
+                          options='{"title": "",
+                                    "backgroundColor": "transparent",
+                                    "width": "150",
+                                    "height": "40",
+                                    "legend": "none",
+                                    "vAxis": {"textPosition" : "none"},
+                                    "hAxis": {"textPosition" : "none" }}'
+                          cols='[ {"label": "Data", "type": "string"},{"label": "Value", "type": "number"} ]'
+                          rows='[ ["01AM", 243],["02AM", 423],["03AM", 382],["04AM", 572],["05AM", 358],["06AM", 683],["07AM", 573],["08AM", 492],["09AM", 274],["10AM", 495],["11AM", 593],["12PM", 529],["01PM", 357],["02PM", 418],["03PM", 278],["04PM", 458],["05PM", 534] ]'
+                        </google-chart>
+                      </span>
                       <span>Dow Jones</span> <span>17,737.37</span> <span class="metric-danger">-170.50</span> <span class="metric-danger">(-0.95%)</span>
                     </div>
-                  </paper-item id="thing2" hero-id="thing" hero?="{{subpage === 2}}" cross-fade?="{{subpage !== 2}}">
+                  </paper-item>
                   <hr class="indented-lg">
                   <paper-item>
                     <div horizontal justified layout style="width:100%">
                       <span class="legend-item metric-primary">&#9679;</span>
+                      <span hidden?="{{!largeScreen}}">
+                        <google-chart
+                          id='sparkline_chart2'
+                          class='chart-sparkline chart-sparkline-info'
+                          type='line'
+                          options='{"title": "",
+                                    "backgroundColor": "transparent",
+                                    "width": "150",
+                                    "height": "40",
+                                    "legend": "none",
+                                    "vAxis": {"textPosition" : "none"},
+                                    "hAxis": {"textPosition" : "none" }}'
+                          cols='[ {"label": "Data", "type": "string"},{"label": "Value", "type": "number"} ]'
+                          rows='[ ["01AM", 243],["02AM", 423],["03AM", 382],["04AM", 572],["05AM", 358],["06AM", 683],["07AM", 573],["08AM", 492],["09AM", 274],["10AM", 495],["11AM", 593],["12PM", 529],["01PM", 357],["02PM", 418],["03PM", 278],["04PM", 458],["05PM", 534] ]'
+                        </google-chart>
+                      </span>
                       <span>S&amp;P 500</span> <span>2,044.81</span> <span class="metric-danger">-17.33</span> <span class="metric-danger">(-0.84%)</span>
                     </div>
                   </paper-item>
@@ -78,6 +111,22 @@
                   <paper-item>
                     <div horizontal justified layout style="width:100%">
                       <span class="legend-item metric-warning">&#9679;</span>
+                      <span hidden?="{{!largeScreen}}">
+                        <google-chart
+                          id='sparkline_chart3'
+                          class='chart-sparkline chart-sparkline-warning'
+                          type='line'
+                          options='{"title": "",
+                                    "backgroundColor": "transparent",
+                                    "width": "150",
+                                    "height": "40",
+                                    "legend": "none",
+                                    "vAxis": {"textPosition" : "none"},
+                                    "hAxis": {"textPosition" : "none" }}'
+                          cols='[ {"label": "Data", "type": "string"},{"label": "Value", "type": "number"} ]'
+                          rows='[ ["01AM", 243],["02AM", 423],["03AM", 382],["04AM", 572],["05AM", 358],["06AM", 683],["07AM", 573],["08AM", 492],["09AM", 274],["10AM", 495],["11AM", 593],["12PM", 529],["01PM", 357],["02PM", 418],["03PM", 278],["04PM", 458],["05PM", 534] ]'
+                        </google-chart>
+                      </span>
                       <span>Nasdaq</span> <span>4,704.07</span> <span class="metric-danger">-32.12</span> <span class="metric-danger">(-0.68%)</span>
                     </div>
                   </paper-item>
@@ -283,8 +332,7 @@
           <paper-tab>max</paper-tab>
         </paper-tabs>
         <google-chart
-          id='resizing_chart'
-          class='chart-area'
+          class='resizing_chart chart-area'
           type='area'
           options='{"title": "",
                     "backgroundColor": "transparent",
@@ -538,8 +586,7 @@
           <paper-tab>max</paper-tab>
         </paper-tabs>
         <google-chart
-          id='resizing_chart'
-          class='chart-area'
+          class='resizing_chart chart-area'
           type='area'
           options='{"title": "",
                     "backgroundColor": "transparent",
@@ -652,7 +699,7 @@
                   <paper-icon-button icon="more-vert" class="more"></paper-icon-button>
                 </div>
                 <hr>
-                <paper-tabs id="paper_tabs2" selected="0" class="tabs-danger">
+                <paper-tabs id="paper_tabs2" selected="0" class="tabs-success">
                   <paper-tab>Relevance</paper-tab>
                   <paper-tab>Date</paper-tab>
                 </paper-tabs>
