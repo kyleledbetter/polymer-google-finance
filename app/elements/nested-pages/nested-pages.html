@@ -7,12 +7,12 @@
     </core-media-query>
     <core-animated-pages selected="{{page}}" transitions="hero-transition cross-fade">
       <core-drawer-panel transition="" id="core_drawer_panel" touch-action="" responsiveWidth="1080px">
-        <section id="section" drawer="">
-          <core-toolbar id="core_toolbar2" class="medium-tall">
-            <div layout vertical flex>
-              <core-image src="https://secure.gravatar.com/avatar/2f774212696fd39fac6baee7bb4a3296?s=64"></core-image>
-              <div class="text-sm">Kyle Ledbetter</div>
-              <paper-dropdown-menu id="paper_dropdown_menu" label="ledbetter@gmail.com" class="">
+        <section id="section" drawer="" class="drawer">
+          <core-toolbar id="core_toolbar2" class="tall bg">
+            <core-image class="middle" src="https://secure.gravatar.com/avatar/2f774212696fd39fac6baee7bb4a3296?s=64"></core-image>
+            <div class="bottom" flex>
+              <div class="name">Kyle Ledbetter</div>
+              <paper-dropdown-menu id="paper_dropdown_menu" label="ledbetter@gmail.com" class="email">
                 <paper-dropdown id="paper_dropdown" class="dropdown">
                     <core-menu class="core_menu" class="menu" selectedAttribute="">
                         <paper-item>Profile</paper-item>
@@ -23,7 +23,7 @@
               </paper-dropdown-menu>
             </div>
           </core-toolbar>
-          <core-menu class="core_menu" selected="0" selectedindex="0" id="core_menu" selectedAttribute="">
+          <core-menu class="core_menu drawer_menu" selected="0" selectedindex="0" id="core_menu" selectedAttribute="">
             <paper-item><core-icon icon="account-balance"></core-icon> Markets</paper-item>
             <paper-item><core-icon icon="av:news"></core-icon> News</paper-item>
             <paper-item><core-icon icon="view-carousel"></core-icon> Portfolios</paper-item>
@@ -33,9 +33,9 @@
         </section>
         <section id="section1" main="">
           <core-scroll-header-panel scrollAwayTopbar headermargin="128" condenses="" keepcondensedheader="" headerheight="192" id="core_scroll_header_panel">
-            <core-toolbar id="core_toolbar" class="medium-tall">
+            <core-toolbar id="mainheader" class="medium-tall">
               <paper-icon-button icon="menu" core-drawer-toggle></paper-icon-button>
-              <div id="div" flex="">Market Summary</div>
+              <div id="div" flex="" class="title">Market Summary</div>
               <paper-icon-button icon="search" id="core_icon_button1"></paper-icon-button>
               <paper-icon-button icon="more-vert" id="core_icon_button2"></paper-icon-button>
               <paper-tabs id="paper_tabs" selected="0" class="bottom" flex>
@@ -58,7 +58,7 @@
                     <core-menu class="core_menu" id="core_menu2" on-tap="{{transition}}" selectedAttribute="">
                       <paper-item class="force-vertical"  id="thing1" hero-id="thing" hero?="{{subpage === 0}}" cross-fade?="{{subpage !== 0}}">
                         <google-chart
-                          id='resizing_chart'
+                          class='resizing_chart'
                           type='line'
                           options='{"title": "",
                                     "backgroundColor": "transparent",
@@ -80,6 +80,22 @@
                       <paper-item id="thing1" class="ripple-danger" hero-id="thing" hero?="{{subpage === 1}}" cross-fade?="{{subpage !== 1}}">
                         <div horizontal justified layout style="width:100%">
                           <span class="legend-item metric-danger">&#9679;</span>
+                          <span hidden?="{{!largeScreen}}">
+                            <google-chart
+                              id='sparkline_chart'
+                              class='chart-sparkline chart-sparkline-danger'
+                              type='line'
+                              options='{"title": "",
+                                        "backgroundColor": "transparent",
+                                        "width": "150",
+                                        "height": "40",
+                                        "legend": "none",
+                                        "vAxis": {"textPosition" : "none"},
+                                        "hAxis": {"textPosition" : "none" }}'
+                              cols='[ {"label": "Data", "type": "string"},{"label": "Value", "type": "number"} ]'
+                              rows='[ ["01AM", 243],["02AM", 423],["03AM", 382],["04AM", 572],["05AM", 358],["06AM", 683],["07AM", 573],["08AM", 492],["09AM", 274],["10AM", 495],["11AM", 593],["12PM", 529],["01PM", 357],["02PM", 418],["03PM", 278],["04PM", 458],["05PM", 534] ]'
+                            </google-chart>
+                          </span>
                           <span>Dow Jones</span> <span>17,737.37</span> <span class="metric-danger">-170.50</span> <span class="metric-danger">(-0.95%)</span>
                         </div>
                       </paper-item>
@@ -87,6 +103,22 @@
                       <paper-item>
                         <div horizontal justified layout style="width:100%">
                           <span class="legend-item metric-primary">&#9679;</span>
+                          <span hidden?="{{!largeScreen}}">
+                            <google-chart
+                              id='sparkline_chart'
+                              class='chart-sparkline chart-sparkline-info'
+                              type='line'
+                              options='{"title": "",
+                                        "backgroundColor": "transparent",
+                                        "width": "150",
+                                        "height": "40",
+                                        "legend": "none",
+                                        "vAxis": {"textPosition" : "none"},
+                                        "hAxis": {"textPosition" : "none" }}'
+                              cols='[ {"label": "Data", "type": "string"},{"label": "Value", "type": "number"} ]'
+                              rows='[ ["01AM", 243],["02AM", 423],["03AM", 382],["04AM", 572],["05AM", 358],["06AM", 683],["07AM", 573],["08AM", 492],["09AM", 274],["10AM", 495],["11AM", 593],["12PM", 529],["01PM", 357],["02PM", 418],["03PM", 278],["04PM", 458],["05PM", 534] ]'
+                            </google-chart>
+                          </span>
                           <span>S&amp;P 500</span> <span>2,044.81</span> <span class="metric-danger">-17.33</span> <span class="metric-danger">(-0.84%)</span>
                         </div>
                       </paper-item>
@@ -94,6 +126,22 @@
                       <paper-item>
                         <div horizontal justified layout style="width:100%">
                           <span class="legend-item metric-warning">&#9679;</span>
+                          <span hidden?="{{!largeScreen}}">
+                            <google-chart
+                              id='sparkline_chart'
+                              class='chart-sparkline chart-sparkline-warning'
+                              type='line'
+                              options='{"title": "",
+                                        "backgroundColor": "transparent",
+                                        "width": "150",
+                                        "height": "40",
+                                        "legend": "none",
+                                        "vAxis": {"textPosition" : "none"},
+                                        "hAxis": {"textPosition" : "none" }}'
+                              cols='[ {"label": "Data", "type": "string"},{"label": "Value", "type": "number"} ]'
+                              rows='[ ["01AM", 243],["02AM", 423],["03AM", 382],["04AM", 572],["05AM", 358],["06AM", 683],["07AM", 573],["08AM", 492],["09AM", 274],["10AM", 495],["11AM", 593],["12PM", 529],["01PM", 357],["02PM", 418],["03PM", 278],["04PM", 458],["05PM", 534] ]'
+                            </google-chart>
+                          </span>
                           <span>Nasdaq</span> <span>4,704.07</span> <span class="metric-danger">-32.12</span> <span class="metric-danger">(-0.68%)</span>
                         </div>
                       </paper-item>
