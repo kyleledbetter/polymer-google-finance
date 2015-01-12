@@ -17,9 +17,11 @@ core-animated-pages {
   margin-left: 4%;
 }
 .tall-toolbar.colored {
-  background-color: #90A4AE;
   fill: #fff;
   color: #fff;
+}
+.tall-toolbar.colored-default {
+  background-color: #546E7A;
 }
 .tall-toolbar.colored-danger {
   background-color: #F44336;
@@ -39,7 +41,8 @@ paper-icon-button {
 }
 
 .body {
-  background-color: #f1f1f1;
+  background-color: #eee;
+  box-shadow: inset 0 1px 5px rgba(0,0,0,0.3);
 }
 h2 {
   font-size: 20px;
@@ -53,7 +56,7 @@ h2 {
   margin-bottom: 5px;
 }
 hr {
-  border-top: 0;
+  border: 0;
   border-bottom: 1px solid #eee;
   margin-top: 0;
   margin-bottom: 0;
@@ -105,7 +108,7 @@ core-animated-pages {
   width: 100%;
   height: 100%;
 }
-#core_toolbar,
+#mainheader,
 #core_toolbar2 {
   color: white;
   fill: white;
@@ -131,6 +134,12 @@ core-animated-pages {
 }
 #paper_tabs2.tabs-danger paper-tab::shadow #ink {
   color: #F44336;
+}
+#paper_tabs2.tabs-success::shadow #selectionBar {
+  background-color: #4CAF50;
+}
+#paper_tabs2.tabs-success paper-tab::shadow #ink {
+  color: #4CAF50;
 }
 #paper_dropdown_menu {
   border-bottom: 0;
@@ -235,11 +244,11 @@ core-animated-pages {
   background-color: orange;
   color: #fff;
 }
-#resizing_chart {
+.resizing_chart {
   width: 100%;
   height: 150px;
 }
-#resizing_chart /deep/ div[dir="ltr"] {
+.resizing_chart /deep/ div[dir="ltr"] {
   width: 100% !important;
 }
 .force-vertical /deep/ [layout][horizontal] {
@@ -250,55 +259,86 @@ core-animated-pages {
   -webkit-align-items: inherit;
   align-items: inherit;
 }
-#resizing_chart {
+.resizing_chart {
   width: 100%;
   height: 150px;
   overflow: hidden;
 }
-.tall-toolbar #resizing_chart /deep/ svg {
+.tall-toolbar .resizing_chart /deep/ svg {
   margin-top: -25px;
   margin-left: -25px;
 }
-.body #resizing_chart /deep/ svg {
+.body .resizing_chart /deep/ svg {
   margin-top: -20px;
   margin-left: -25px;
 }
-.tall-toolbar #resizing_chart /deep/ rect[fill="#3366cc"] {
+.tall-toolbar .resizing_chart /deep/ rect[fill="#3366cc"] {
   fill: rgba(255, 255, 255, 0.8);
 }
-.tall-toolbar #resizing_chart /deep/ rect[fill="#333333"] {
+.tall-toolbar .resizing_chart /deep/ rect[fill="#333333"] {
   fill: rgba(255, 255, 255, 0.4);
 }
-.tall-toolbar #resizing_chart /deep/ rect[fill="#cccccc"] {
+.tall-toolbar .resizing_chart /deep/ rect[fill="#cccccc"] {
   fill: rgba(255, 255, 255, 0.25);
 }
-.tall-toolbar #resizing_chart /deep/ text[fill="#444444"],
-.tall-toolbar #resizing_chart /deep/ text[fill="#222222"] {
+.tall-toolbar .resizing_chart /deep/ text[fill="#444444"],
+.tall-toolbar .resizing_chart /deep/ text[fill="#222222"] {
   fill: rgba(255, 255, 255, 0.8);
 }
-.tall-toolbar #resizing_chart.chart-area /deep/ path[stroke="#3366cc"] {
+.tall-toolbar .resizing_chart.chart-area /deep/ path[stroke="#3366cc"] {
   stroke: white;
   stroke-width: 3;
 }
-.tall-toolbar #resizing_chart /deep/ path[fill="#3366cc"] {
+.tall-toolbar .resizing_chart /deep/ path[fill="#3366cc"] {
   fill: rgba(255, 255, 255, 0.25);
 }
-.body #resizing_chart /deep/ rect[fill="#3366cc"] {
+.tall-toolbar.colored-default .resizing_chart /deep/ path[stroke="#3366cc"] {
+  stroke: #4FC3F7;
+  stroke-width: 2;
+}
+.tall-toolbar.colored-default .resizing_chart /deep/ path[stroke="#dc3912"] {
+  stroke: #EF5350;
+  stroke-width: 2;
+}
+.tall-toolbar.colored-default .resizing_chart /deep/ path[stroke="#ff9900"] {
+  stroke: #FFA726;
+  stroke-width: 2;
+}
+
+.body .resizing_chart /deep/ rect[fill="#3366cc"] {
   fill: orange;
 }
-.body #resizing_chart /deep/ rect[fill="#cccccc"] {
+.body .resizing_chart /deep/ rect[fill="#cccccc"] {
   fill: rgba(0, 0, 0, 0.05);
 }
-.body #resizing_chart /deep/ text[fill="#444444"],
-.body #resizing_chart /deep/ text[fill="#222222"] {
+.body .resizing_chart /deep/ text[fill="#444444"],
+.body .resizing_chart /deep/ text[fill="#222222"] {
   fill: rgba(0, 0, 0, 0.5);
 }
-.body #resizing_chart /deep/ rect[fill="#333333"] {
+.body .resizing_chart /deep/ rect[fill="#333333"] {
   fill: rgba(0, 0, 0, 0.1);
 }
-.body #resizing_chart /deep/ path[stroke="#3366cc"] {
+.body .resizing_chart /deep/ path[stroke="#3366cc"] {
   stroke: #4CAF50;
   stroke-width: 3;
+}
+.chart-sparkline {
+  width: 150px;
+  height: 30px;
+  overflow: hidden;
+  margin-bottom: -25px;
+}
+.chart-sparkline-info /deep/ path[stroke="#3366cc"] {
+  stroke: #03A9F4;
+}
+.chart-sparkline-danger /deep/ path[stroke="#3366cc"] {
+  stroke: #F44336;
+}
+.chart-sparkline-warning /deep/ path[stroke="#3366cc"] {
+  stroke: #FF9800;
+}
+.chart-sparkline /deep/ rect[fill="#cccccc"] {
+  fill: rgba(0, 0, 0, 0.05);
 }
 paper-progress.progress-danger::shadow #activeProgress {
   background-color: #F44336;
