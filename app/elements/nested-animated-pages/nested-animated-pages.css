@@ -33,6 +33,13 @@ core-animated-pages {
   margin-left: 6%;
   margin-right: 4%;
 }
+.tall-toolbar .metric,
+.tall-toolbar small {
+  color: #fff;
+}
+.tall-toolbar .metrics > span {
+  margin-right: 10px;
+}
 .toolbar-title {
   font-size: 1.3em;
 }
@@ -123,11 +130,11 @@ core-animated-pages {
 #paper_tabs paper-tab::shadow #ink {
   color: white;
 }
-#paper_tabs2::shadow #selectionBar {
-  background-color: #4CAF50;
+#paper_tabs2.tabs-default::shadow #selectionBar {
+  background-color: #546E7A;
 }
-#paper_tabs2 paper-tab::shadow #ink {
-  color: #4CAF50;
+#paper_tabs2.tabs-default paper-tab::shadow #ink {
+  color: #546E7A;
 }
 #paper_tabs2.tabs-danger::shadow #selectionBar {
   background-color: #F44336;
